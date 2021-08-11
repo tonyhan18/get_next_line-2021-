@@ -6,7 +6,7 @@
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 20:47:02 by chahan            #+#    #+#             */
-/*   Updated: 2021/08/11 21:06:29 by chahan           ###   ########.fr       */
+/*   Updated: 2021/08/11 21:29:55 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*trim(char **str)
 	return (ret);
 }
 
-char *initArray(char **saved_str, char **buf)
+char	*initArray(char **saved_str, char **buf)
 {
 	if (!(*saved_str))
 	{
@@ -85,14 +85,4 @@ char	*get_next_line(int fd)
 	}
 	free(buf);
 	return (trim(&saved_str));
-}
-
-int main(void)
-{
-	int fd = open("file",O_RDWR);
-	char *str;
-	while (str = get_next_line(fd))
-	{
-		printf("%s\n", str);
-	}
 }
