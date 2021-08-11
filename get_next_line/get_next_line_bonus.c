@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 20:47:02 by chahan            #+#    #+#             */
-/*   Updated: 2021/08/11 21:06:29 by chahan           ###   ########.fr       */
+/*   Updated: 2021/08/11 21:07:26 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	strlen2(char *str)
 {
@@ -46,7 +46,7 @@ char	*trim(char **str)
 	return (ret);
 }
 
-char *initArray(char **saved_str, char **buf)
+char	*initArray(char **saved_str, char **buf)
 {
 	if (!(*saved_str))
 	{

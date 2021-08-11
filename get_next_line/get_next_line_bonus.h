@@ -6,12 +6,12 @@
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 20:47:07 by chahan            #+#    #+#             */
-/*   Updated: 2021/08/11 21:08:00 by chahan           ###   ########.fr       */
+/*   Updated: 2021/08/11 20:49:37 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_BONUS_H
-# define GET_NEXT_LINE_BONUS_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
 # include <fcntl.h>
 # include <stdlib.h>
