@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "get_next_line.h"
 
 int		strlen2(char *str)
@@ -47,6 +46,21 @@ char	*trim(char **str)
 	return (ret);
 }
 
+int		initArray(char **saved_str, char **buf)
+{
+	if (!(*saved_str))
+	{
+		(*saved_str) = (char *)malloc(1);
+		if (!(*saved_str))
+			return (NULL);
+		(*saved_str)[0] = 0;
+	}
+	(*buf) = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (!(*buf))
+		return (NULL);
+	return (1);
+}
+
 char	*get_next_line(int fd)
 {
 	static char	*saved_str;
@@ -56,16 +70,13 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
-	if (!saved_str)
-	{
-		saved_str = (char *)malloc(1);
-		saved_str[0] = 0;
-	}
-	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
-	if (!buf)
+	if(!initArray(&saved_str, &buf))
 		return (NULL);
-	while ((rdb = read(fd, buf, BUFFER_SIZE)) > 0)
+	while (1)
 	{
+		rdb = read(fd, buf, BUFFER_SIZE);
+		if (rdb <= 0)
+			break ;
 		buf[rdb] = 0;
 		tmp = ft_strjoin(saved_str, buf);
 		free(saved_str);
@@ -73,16 +84,4 @@ char	*get_next_line(int fd)
 	}
 	free(buf);
 	return (trim(&saved_str));
-}
-
-int main()
-{
-	int fd = open("file", O_RDWR);
-	int i = 0;
-	char *str;
-	while ((str = get_next_line(fd)))
-	{
-		printf("%s\n", str);
-	}
-	return (0);
 }

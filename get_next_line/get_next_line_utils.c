@@ -88,8 +88,10 @@ char	*ft_strjoin(char *s1, char *s2)
 
 	if (!s1 && !s2)
 		return (NULL);
-	else if (!s1 || !s2)
-		return (s1 == 0 ? ft_strdup(s2) : ft_strdup(s1));
+	else if (s1 == 0)
+		return (ft_strdup(s2));
+	else
+		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	new_mem = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));

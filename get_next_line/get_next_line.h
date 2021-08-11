@@ -18,7 +18,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-# define BUFFER_SIZE 8
+#  define BUFFER_SIZE 8
 # endif
 
 char		*get_next_line(int fd);
