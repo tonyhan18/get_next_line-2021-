@@ -6,7 +6,7 @@
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 20:47:12 by chahan            #+#    #+#             */
-/*   Updated: 2021/08/09 20:47:16 by chahan           ###   ########.fr       */
+/*   Updated: 2021/08/11 20:49:14 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strlen(const char *s)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while (*(s++))
@@ -78,7 +78,6 @@ char	*ft_strdup(const char *str)
 	ft_strlcpy(new_mem, str, str_len + 1);
 	return (new_mem);
 }
-
 
 char	*ft_strjoin(char *s1, char *s2)
 {

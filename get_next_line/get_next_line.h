@@ -6,7 +6,7 @@
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 20:47:07 by chahan            #+#    #+#             */
-/*   Updated: 2021/08/09 20:47:08 by chahan           ###   ########.fr       */
+/*   Updated: 2021/08/11 20:49:37 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # endif
 
 char		*get_next_line(int fd);
-size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
+size_t		ft_strlcpy(char *dest, const char *src, size_t dstsize);
 char		*ft_strjoin(char *s1, char *s2);
 char		*ft_strdup(const char *str);
 

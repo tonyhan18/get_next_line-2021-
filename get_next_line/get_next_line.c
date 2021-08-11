@@ -6,13 +6,13 @@
 /*   By: chahan <hgdst14@naver.com>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 20:47:02 by chahan            #+#    #+#             */
-/*   Updated: 2021/08/09 20:47:04 by chahan           ###   ########.fr       */
+/*   Updated: 2021/08/11 20:50:41 by chahan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int		strlen2(char *str)
+int	strlen2(char *str)
 {
 	int		i;
 
@@ -46,7 +46,7 @@ char	*trim(char **str)
 	return (ret);
 }
 
-int		initArray(char **saved_str, char **buf)
+int	initArray(char **saved_str, char **buf)
 {
 	if (!(*saved_str))
 	{
@@ -64,13 +64,13 @@ int		initArray(char **saved_str, char **buf)
 char	*get_next_line(int fd)
 {
 	static char	*saved_str;
-	char				*buf;
-	char				*tmp;
-	int					rdb;
+	char		*buf;
+	char		*tmp;
+	int			rdb;
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
-	if(!initArray(&saved_str, &buf))
+	if (!initArray(&saved_str, &buf))
 		return (NULL);
 	while (1)
 	{
