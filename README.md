@@ -10,8 +10,9 @@ int get_next_line(int fd, char **line);
 <br>
 <br>
 but after that, we using like this<br>
+
 ```c
-char *get_next_line(int fd)
+char *get_next_line(int fd);
 ```
 <br>
 <br>
