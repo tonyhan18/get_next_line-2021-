@@ -89,7 +89,7 @@ char	*ft_strjoin(char *s1, char *s2)
 		return (NULL);
 	else if (s1 == 0)
 		return (ft_strdup(s2));
-	else
+	else if (s2 == 0)
 		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);

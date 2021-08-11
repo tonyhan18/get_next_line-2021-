@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "get_next_line.h"
 
 int	strlen2(char *str)
@@ -84,4 +85,14 @@ char	*get_next_line(int fd)
 	}
 	free(buf);
 	return (trim(&saved_str));
+}
+
+int main(void)
+{
+	int fd = open("file",O_RDWR);
+	char *str;
+	while (str = get_next_line(fd))
+	{
+		printf("%s\n", str);
+	}
 }
